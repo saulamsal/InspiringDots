@@ -12,6 +12,8 @@ Update 1: Issue with using solely the drag & drop API is that I wouldn't be able
 
 Update 2: The issue isn't with the drag & drop API. I've found the solution to the dropzone issue. I'm going to create 5 divs, place them where the 5 holes are in the logo. This way I can easily create the drag&drop functions without too much clutter.
 
+Update 3: Finished the dropzones. Cleaned up useless code in the script file. There is one slight issue, since I'm positioning everything relative to the canvas the dropzone dots move when displaying the winning message. To fix this all I need to do when removing "display: none;" with the winning message is: subtract 20px with each dropzone from the top.
+
 
 
 

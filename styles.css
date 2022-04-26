@@ -1,54 +1,111 @@
 /* Stylesheet */
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
-
 /* Making sure everything is in the middle of the screen */
+/* Set the canvas to absolute so I can move the divs relative to the position of the canvas. This way I can place the dropzone divs in specific coordinates relative to the canvas. */
 .canvas {
-    position: fixed;
+    position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100%; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
+
+/* Simple message styling. Display none will be removed using JS after all of the dots are dragged in place. */
 .canvas__message {
+    position: relative;
+    top: -10%;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 500;
     display: none;
+    text-align: center;
 }
 
-.canvas__message .active {
-    display: visible;
-}
 
+/* Canvas dots have z-index 3 so they'll show up above the dropzone divs. Isn't entirely necessary, but just in case. */
 .canvas__dots {
-    margin: 2rem;
+    position: relative;
+    top: -5%;
+    z-index: 3;
 }
 
+/* Some canvas dot styling */
 .canvas__dots img {
     cursor: pointer;
     border: 4px solid white;
     border-radius: 50%;
 }
 
+/* set it to absolute so everything works ^^ */
+.canvas__logo {
+    position: absolute;
+}
+
+
+/* General dropzone styling border will be dashed once hovered above */
+.canvas__dropzone {
+    width: 90px;
+    height: 90px;
+    background: transparent;
+    border: 2px solid green;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+
+/* Individual dropzone positioning */
+/* When revealing winning message make sure to subtract 20px at the top  */
+.drop-one {
+    position: relative;
+    left: 12px;
+    top: 30px;
+}
+
+.drop-two {
+    position: relative;
+    left: -140px;
+    top: 36px;
+}
+
+.drop-three {
+    position: relative;
+    left: -76px;
+    top: 42px;
+}
+
+.drop-four {
+    position: relative;
+    left: 108px;
+    top: -80px;
+}
+
+.drop-five {
+    position: relative;
+    left: 133px;
+    top: -314px;
+}
+
+
 .canvas__buttons {
+    position: relative;
     margin-top: 2rem;
+    
 }
 
 /* Simple button styling */
 .canvas__button-reset {
-    background-color: #168afa;
-    border: solid 1px transparent;
+    background-color: #168afa; /* Green */
+    border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -64,5 +121,6 @@
 .canvas__button-reset:hover {
     color: #168afa;
     background-color: white;
-    border-color:#168afa;
+    border: 1px solid #168afa;
 }
+
