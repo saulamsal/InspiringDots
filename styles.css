@@ -7,3 +7,60 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* Making sure everything is in the middle of the screen */
+.canvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.canvas__message {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 500;
+    display: none;
+}
+
+.canvas__message .active {
+    display: visible;
+}
+
+.canvas__dots {
+    margin: 2rem;
+}
+
+.canvas__dots img {
+    cursor: pointer;
+}
+
+.canvas__buttons {
+    margin-top: 2rem;
+}
+
+/* Simple button styling */
+.canvas__button-reset {
+    background-color: #168afa;
+    border: solid 1px transparent;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: all .3s ease;
+    text-transform: uppercase;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.canvas__button-reset:hover {
+    color: #168afa;
+    background-color: white;
+    border-color:#168afa;
+}
