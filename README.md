@@ -10,6 +10,9 @@ Get the coordinates of the empty spaces in the maze (after styling). Once the do
 
 Update 1: Issue with using solely the drag & drop API is that I wouldn't be able to properly specify a "drop zone". Thus I'll be creating a custom drop effect.
 
+Update 2: The issue isn't with the drag & drop API. I've found the solution to the dropzone issue. I'm going to create 5 divs, place them where the 5 holes are in the logo. This way I can easily create the drag&drop functions without too much clutter.
+
+
 
 
 ## HTML5 & CSS3

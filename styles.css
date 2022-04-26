@@ -37,6 +37,8 @@
 
 .canvas__dots img {
     cursor: pointer;
+    border: 4px solid white;
+    border-radius: 50%;
 }
 
 .canvas__buttons {
