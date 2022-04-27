@@ -18,6 +18,9 @@ Get the coordinates of the empty spaces in the maze (after styling). Once the do
 
 - Update 5: drag & drop works. Gotta fix the small offset when a dot is placed in a dropzone. Have to quickly apply a check for if there is already a dot & then when all dots are filled, display winning message + add in reset button functionality.
 
+- Update 6: all added, just gotta make the victory message visible after all dots are filled.
+
+
 
 
 

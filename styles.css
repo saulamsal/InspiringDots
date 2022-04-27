@@ -52,7 +52,10 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    margin-left: 5px;
+}
+
+.canvas__dropzone-dragover {
+    opacity: 0.5;
 }
 
 /* set it to absolute so everything works ^^ */
@@ -68,7 +71,6 @@
     height: 90px;
     background: transparent;
     z-index: 1;
-    border: 2px solid red;
     border-radius: 50%;
 }
 

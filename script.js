@@ -1,47 +1,54 @@
 const message = document.querySelector("[data-message]");
-const img = document.getElementById("logo");
+const dotParent = document.getElementById("dotParent");
 const dots = document.querySelectorAll("[data-dots]");
 const dropzones = document.querySelectorAll("[data-dropzone]");
-const canvas = document.querySelector("#canvas");
+const button = document.getElementById("btn");
 
-dots.forEach((dot) => {
-  dot.addEventListener("dragstart", dragStart);
-});
+function main() {
+  if (dotParent.childElementCount !== 0) {
+    dots.forEach((dot) => {
+      dot.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("text/plain", e.target.id);
+      });
+    });
+    dropzones.forEach((dropzone) => {
+      //prevent default behaviour.
+      dropzone.addEventListener("dragover", (e) => {
+        e.preventDefault();
+      });
 
-dropzones.forEach((dropzone) => {
-  dropzone.addEventListener("dragover", (e) => {
-    e.preventDefault();
-    dropzone.classList.add("canvas__dropzone-dragover");
+      //here we remove the opacity once we stop dragging.
+      dropzone.addEventListener("dragleave", (e) => {
+        dropzone.classList.remove("canvas__dropzone-dragover");
+      });
+
+      // drop logic
+      dropzone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        //we check to see if the dropzone does not have an element. If not it'll allow a drop
+        if (dropzone.childElementCount === 0) {
+          const dropElId = e.dataTransfer.getData("text/plain");
+          const dropEl = document.getElementById(dropElId);
+          dropzone.appendChild(dropEl);
+          dropzone.classList.remove("canvas__dropzone-dragover");
+          return;
+        }
+      });
+    });
+  } else {
+    message.style.visibility = "visible";
+  }
+
+  //reset button, we check to place back up to 5 dots to the parent
+  //Hiding the victory message
+  button.addEventListener("click", (e) => {
+    for (i = 0; i <= 5; i++) {
+      dots.forEach((dot) => {
+        dotParent.appendChild(dot);
+      });
+    }
+    message.style.visibility = "hidden";
   });
-
-  dropzone.addEventListener("dragleave", (e) => {
-    dropzone.classList.remove("canvas__dropzone-dragover");
-  });
-
-  dropzone.addEventListener("drop", (e) => {
-    e.preventDefault();
-
-    const dropElId = e.dataTransfer.getData("text/plain");
-    const dropEl = document.getElementById(dropElId);
-    dropzone.appendChild(dropEl);
-    dropzone.classList.remove("canvas__dropzone-dragover");
-  });
-});
-
-//drag start function - source border gets dashed to indicate drag has started
-//data of object getting moved stored in plain text.
-function dragStart(e) {
-  e.dataTransfer.setData("text/plain", e.target.id);
-  e.currentTarget.style.opacity = "0.2";
 }
 
-//we want to check the following:
-//if the selected dot is dropped outside the dropzone, it'll go back to it's original position.
-//we also want to check if there isn't another dot there already. If there is one, the dragged object will return to its original position.
-function drop(e) {
-  const data = e.dataTransfer.getData("text");
-  e.target.appendChild(document.getElementById(data));
-}
-
-//reset function, dragged items get sent back to their original position.
-function reset(e) {}
+main();
