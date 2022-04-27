@@ -11,37 +11,43 @@
 </head>
 
 <body>
+    <div class="container">
+        <!-- The div below will display the messages for when the user completes the task. -->
+
+        <div data-message class="message">You won!</div>
+        <!-- utilizing the html5 drag & drop API simplifies the whole process of creating a drag & drop function. Less code to worry about.  -->
+        <div class="dots">
+            <div data-dots id="d1" style="background-color: green;" draggable="true" ondragstart="dragStart(event);">
+            </div>
+            <div data-dots id="d1" style="background-color: red;" draggable="true" ondragstart="dragStart(event);">
+            </div>
+            <div data-dots id="d1" style="background-color: blue;" draggable="true" ondragstart="dragStart(event);">
+            </div>
+            <div data-dots id="d1" style="background-color: black;" draggable="true" ondragstart="dragStart(event);">
+            </div>
+            <div data-dots id="d1" style="background-color: yellow;" draggable="true" ondragstart="dragStart(event);">
+            </div>
+        </div>
+
+    </div>
     <!-- Canvas div that acts as a container for everything. -->
     <!-- Everything is in its own div to make styling easier. -->
     <div id="canvas" class="canvas">
-        <!-- The div below will display the messages for when the user completes the task. -->
-        <div data-message class="canvas__message">You won!</div>
-        <!-- utilizing the html5 drag & drop API simplifies the whole process of creating a drag & drop function. Less code to worry about.  -->
-        <div class="canvas__dots">
-            <img data-dots id="d1" src="./img/ia-logo-dot-black.png" alt="black dot" draggable="true">
-            <img data-dots id="d2" src="./img/ia-logo-dot-blue.png" alt="blue dot" draggable="true">
-            <img data-dots id="d3" src="./img/ia-logo-dot-green.png" alt="green dot" draggable="true">
-            <img data-dots id="d4" src="./img/ia-logo-dot-red.png" alt="red dot" draggable="true">
-            <img data-dots id="d5" src="./img/ia-logo-dot-black.png" alt="black dot 2" draggable="true">
-        </div>
-
         <!-- These divs are the dropzones.-->
-        <div data-dropzone class=" canvas__dropzone drop-one"></div>
-        <div data-dropzone class=" canvas__dropzone drop-two"></div>
-        <div data-dropzone class=" canvas__dropzone drop-three"></div>
-        <div data-dropzone class=" canvas__dropzone drop-four"></div>
-        <div data-dropzone class=" canvas__dropzone drop-five"></div>
-
+        <div data-dropzone class=" canvas__dropzone drop-one" ondragover="dragOver(event);"></div>
+        <div data-dropzone class=" canvas__dropzone drop-two" ondragover="dragOver(event);"></div>
+        <div data-dropzone class=" canvas__dropzone drop-three" ondragover="dragOver(event);"></div>
+        <div data-dropzone class=" canvas__dropzone drop-four" ondragover="dragOver(event);"></div>
+        <div data-dropzone class=" canvas__dropzone drop-five" ondragover="dragOver(event);"></div>
 
         <!-- The logo has inline styling, more efficient -->
         <div class="canvas__logo">
             <img id="logo" src="./img/ia-logo-back.png" width="400" height="auto" alt="maze">
         </div>
         <!-- Simple button to reset to the circles to the beginning. -->
-        <div class="canvas__buttons">
-            <button class="canvas__button-reset">reset</button>
-        </div>
+        <button class="button-reset">reset</button>
     </div>
+
 </body>
 
 </html>
