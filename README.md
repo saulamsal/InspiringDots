@@ -20,6 +20,8 @@ Get the coordinates of the empty spaces in the maze (after styling). Once the do
 
 - Update 6: all added, just gotta make the victory message visible after all dots are filled.
 
+- Update 8: added an if statement to only allow a drop of the dot in the correct dropzone. If it's not dropped it the correct dropzone it'll just reset back to it's original position.
+
 
 
 

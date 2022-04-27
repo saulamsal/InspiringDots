@@ -44,7 +44,7 @@
 }
 
 /* Some canvas dot styling */
-#d1, #d2, #d3, #d4, #d5 {
+#drop-one, #drop-two, #drop-three, #drop-four, #drop-five {
     
     z-index: 3;
     cursor: pointer;
@@ -56,19 +56,19 @@
     background-position: center;
 }
 
-#d1{
+#drop-one{
     background-image: url('./img/ia-logo-dot-blue.png')
 }
 
-#d2{
+#drop-two{
     background-image: url('./img/ia-logo-dot-red.png')
 }
 
-#d3{
+#drop-three{
     background-image: url('./img/ia-logo-dot-green.png')
 }
 
-#d4,#d5{
+#drop-four,#drop-five{
     background-image: url('./img/ia-logo-dot-black.png')
 }
 
