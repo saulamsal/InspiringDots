@@ -17,16 +17,11 @@
         <div data-message class="message">You won!</div>
         <!-- utilizing the html5 drag & drop API simplifies the whole process of creating a drag & drop function. Less code to worry about.  -->
         <div class="dots">
-            <div data-dots id="d1" style="background-color: green;" draggable="true" ondragstart="dragStart(event);">
-            </div>
-            <div data-dots id="d1" style="background-color: red;" draggable="true" ondragstart="dragStart(event);">
-            </div>
-            <div data-dots id="d1" style="background-color: blue;" draggable="true" ondragstart="dragStart(event);">
-            </div>
-            <div data-dots id="d1" style="background-color: black;" draggable="true" ondragstart="dragStart(event);">
-            </div>
-            <div data-dots id="d1" style="background-color: yellow;" draggable="true" ondragstart="dragStart(event);">
-            </div>
+            <div data-dots id="d1" style="background-color: green;" draggable="true"></div>
+            <div data-dots id="d2" style="background-color: red;" draggable="true"></div>
+            <div data-dots id="d3" style="background-color: blue;" draggable="true"></div>
+            <div data-dots id="d4" style="background-color: black;" draggable="true"></div>
+            <div data-dots id="d5" style="background-color: yellow;" draggable="true"></div>
         </div>
 
     </div>
@@ -34,11 +29,11 @@
     <!-- Everything is in its own div to make styling easier. -->
     <div id="canvas" class="canvas">
         <!-- These divs are the dropzones.-->
-        <div data-dropzone class=" canvas__dropzone drop-one" ondragover="dragOver(event);"></div>
-        <div data-dropzone class=" canvas__dropzone drop-two" ondragover="dragOver(event);"></div>
-        <div data-dropzone class=" canvas__dropzone drop-three" ondragover="dragOver(event);"></div>
-        <div data-dropzone class=" canvas__dropzone drop-four" ondragover="dragOver(event);"></div>
-        <div data-dropzone class=" canvas__dropzone drop-five" ondragover="dragOver(event);"></div>
+        <div data-dropzone class=" canvas__dropzone drop-one"></div>
+        <div data-dropzone class=" canvas__dropzone drop-two"></div>
+        <div data-dropzone class=" canvas__dropzone drop-three"></div>
+        <div data-dropzone class=" canvas__dropzone drop-four"></div>
+        <div data-dropzone class=" canvas__dropzone drop-five"></div>
 
         <!-- The logo has inline styling, more efficient -->
         <div class="canvas__logo">

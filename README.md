@@ -16,6 +16,9 @@ Get the coordinates of the empty spaces in the maze (after styling). Once the do
 
 - Update 4: fixed the issue of having to change the 20px from the dropzones. I changed up the HTML & CSS so it's not necessary anymore. I've also made it so the dots are divs instead of images. It's easier to drag & drop like that + no unnecessary loading of images if they're simple dots.
 
+- Update 5: drag & drop works. Gotta fix the small offset when a dot is placed in a dropzone. Have to quickly apply a check for if there is already a dot & then when all dots are filled, display winning message + add in reset button functionality.
+
+
 
 
 
@@ -30,4 +33,3 @@ Get the coordinates of the empty spaces in the maze (after styling). Once the do
 - Create a drag, drop & hover over function
 - Add event listener to dots for dragging & dropping
 - Add event listener to dropzones for dropping the dots
-- Make sure to substract 20px from dropzones at top element
