@@ -51,7 +51,7 @@ function main() {
         dotParent.appendChild(dot);
       });
     }
-    message.style.visibility = "hidden";
+    message.innerText = "";
   });
 }
 
