@@ -14,14 +14,16 @@
     <div class="container">
         <!-- The div below will display the messages for when the user completes the task. -->
 
-        <div data-message class="message"></div>
+        <div class="message">
+            <p data-message></p>
+        </div>
         <!-- utilizing the html5 drag & drop API simplifies the whole process of creating a drag & drop function. Less code to worry about.  -->
         <div id="dotParent" class="dots">
-            <div data-dots id="drop-one" class="test"  draggable="true"></div>
-            <div data-dots id="drop-two"  draggable="true"></div>
+            <div data-dots id="drop-one" draggable="true"></div>
+            <div data-dots id="drop-two" draggable="true"></div>
             <div data-dots id="drop-three" draggable="true"></div>
             <div data-dots id="drop-four" draggable="true"></div>
-            <div data-dots id="drop-five"  draggable="true"></div>
+            <div data-dots id="drop-five" draggable="true"></div>
         </div>
 
     </div>

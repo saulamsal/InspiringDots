@@ -11,7 +11,6 @@
 /* Set the canvas to absolute so I can move the divs relative to the position of the canvas. This way I can place the dropzone divs in specific coordinates relative to the canvas. */
 .container {
    height: 20%;
-   margin-top: 4rem;
    
 }
 
@@ -31,8 +30,12 @@
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     text-align: center;
+    height: 50px;
+}
+#dotParent {
+    height: 90px;
 }
 
 
@@ -48,8 +51,8 @@
     
     z-index: 3;
     cursor: pointer;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -70,6 +73,11 @@
 
 #drop-four,#drop-five{
     background-image: url('./img/ia-logo-dot-black.png')
+}
+
+
+div#dotParent > div {
+    margin-right: 5px;
 }
 
 
@@ -98,32 +106,32 @@
 /* When revealing winning message make sure to subtract 20px at the top  */
 .drop-one {
     position: relative;
-    left: 12px;
-    top: 101px;
+    left: 16px;
+    top: 106px;
 }
 
 .drop-two {
     position: relative;
-    left: -140px;
-    top: 107px;
+    left: -136px;
+    top: 112px;
 }
 
 .drop-three {
     position: relative;
-    left: -76px;
-    top: 113px;
+    left: -71px;
+    top: 119px;
 }
 
 .drop-four {
     position: relative;
-    left: 108px;
-    top: -9px;
+    left: 113px;
+    top: -4px;
 }
 
 .drop-five {
     position: relative;
-    left: 133px;
-    top: -243px;
+    left: 136px;
+    top: -238px;
 }
 
 
@@ -151,4 +159,5 @@ button:hover {
     background-color: white;
     border: 1px solid #168afa;
 }
+
 
